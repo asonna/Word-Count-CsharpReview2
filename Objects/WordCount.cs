@@ -8,33 +8,41 @@ namespace TheWordCount.Objects
 	{
 		private string _originalWord;
 		private string _originalSentence;
-		private int _wordCount;
+		// private int _wordCount = 0;
 
 		public RepeatCounter(string word, string sentence)
 		{
 			_originalWord = word;
 			_originalSentence = sentence;
-			_wordCount = 0;
 		}
 
-			public string GetWord()
-			{
-				return _originalWord;
-			}
+		public string GetWord()
+		{
+			return _originalWord;
+		}
 
-			public string GetSentence()
-			{
-				return _originalSentence;
-			}
+		public string GetSentence()
+		{
+			return _originalSentence;
+		}
 
-			public int GetCount()
-			{
-				return _wordCount;
-			}
+		// public int GetCount()
+		// {
+		// 	return _wordCount;
+		// }
 
-			public int CountRepeats(string _originalWord, string _originalSentence)
+		public int CountRepeats(string _originalWord, string _originalSentence)
+		{
+			int _workCount = 0;
+			if (_originalWord == _originalSentence)
 			{
-				return _wordCount;
+				_workCount += 1;
 			}
+			else
+			{
+				_workCount += 0;
+			}
+			return _workCount;
 		}
 	}
+}
