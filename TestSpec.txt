@@ -1,1 +1,32 @@
+#Specifications
 
+
+* _Behavior1: Check a word again same word
+* _Input: WORD, WORD
+* _Output: WORD
+* _Description: To ensure that the word can be located
+
+* _behavior2: Check a word again itself and validate a count of 1
+* _Input: WORD, WORD
+* _Output: 1
+* _Description: To first insure that our match is register as 1
+
+* _behavior3: Check a word again string of words with a single match and still return a count of 1
+* _Input: LIFE IS NOT EASY, LIFE
+* _Output: 1
+* _Description: To first insure that our match is located within a string and still return a count of 1
+
+* _behavior4: Check a word again string of words with multiple match and return number of matches
+* _Input: A DOG OWNER TOOK HIS DOG INTO A DOG STORE, DOG
+* _Output: 3
+* _Description: To ensure that the recurrences of matches are accounted for
+
+* _behavior5: Check a word again string of words with word appearing as partial in other words
+* _Input: A CAT WAS CATCHING A NAP AT THE CATHEDRAL, CAT
+* _Output: 1
+* _Description: To ensure that partial words or embedded words are not been counted
+
+* _behavior6: Check a word again string of words with no match
+* _Input: I WILL ACE THIS REVIEW, REALLY
+* _Output: "Your original word has no match to your string; Please try another combination."
+* _Description: To ensure that no matching scenario are recognized by the program
