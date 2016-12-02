@@ -26,21 +26,18 @@ namespace TheWordCount.Objects
 			return _originalSentence;
 		}
 
-		// public int GetCount()
-		// {
-		// 	return _wordCount;
-		// }
-
 		public int CountRepeats(string _originalWord, string _originalSentence)
 		{
+			List<string> matchlist = new List<string> (_originalSentence.Split(' '));
 			int _workCount = 0;
-			if (_originalWord == _originalSentence)
+
+			foreach (string word in matchlist)
 			{
-				_workCount += 1;
-			}
-			else
-			{
-				_workCount += 0;
+				if (_originalWord == word)
+				{
+					_workCount += 1;
+				}
+
 			}
 			return _workCount;
 		}

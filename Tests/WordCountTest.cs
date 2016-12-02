@@ -1,6 +1,7 @@
 using Xunit;
 using System.Collections.Generic;
 using System;
+using TheWordCount.Objects;
 
 namespace TheWordCount.Objects
 {
@@ -16,8 +17,8 @@ namespace TheWordCount.Objects
     [Fact]
     public void CountRepeats_ForSingleWordAgainstStringOfWordIncludingItselfOnce_1()
     {
-      RepeatCounter newWord = new RepeatCounter("LIFE IS NOT EASY", "LIFE");
-      Assert.Equal(1, newWord.CountRepeats("LIFE IS NOT EASY", "LIFE"));
+      RepeatCounter newWord = new RepeatCounter("LIFE", "LIFE IS NOT EASY");
+      Assert.Equal(1, newWord.CountRepeats("LIFE", "LIFE IS NOT EASY"));
     }
   }
 }
