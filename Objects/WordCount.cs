@@ -4,8 +4,38 @@ using System.Linq;
 
 namespace TheWordCount.Objects
 {
-	public class WordCount
+	public class RepeatCounter
 	{
-		
+		private string _originalWord;
+		private string _originalSentence;
+		private int _wordCount;
+
+		public RepeatCounter(string word; string sentence)
+		{
+			_originalWord = word;
+			_originalSentence = sentence;
+			_wordCount = 0;
+		}
+
+			public string GetWord()
+			{
+				return _originalWord;
+			}
+
+			public string GetSentence()
+			{
+				return _originalSentence;
+			}
+
+			public string GetCount()
+			{
+				return _wordCount;
+			}
+
+			public int CountRepeats(_originalWord, _originalSentence)
+			{
+
+				return _wordCount;
+			}
+		}
 	}
-}
