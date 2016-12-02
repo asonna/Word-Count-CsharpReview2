@@ -10,7 +10,7 @@ namespace TheWordCount.Objects
 		private string _originalSentence;
 		private int _wordCount;
 
-		public RepeatCounter(string word; string sentence)
+		public RepeatCounter(string word, string sentence)
 		{
 			_originalWord = word;
 			_originalSentence = sentence;
@@ -27,14 +27,13 @@ namespace TheWordCount.Objects
 				return _originalSentence;
 			}
 
-			public string GetCount()
+			public int GetCount()
 			{
 				return _wordCount;
 			}
 
-			public int CountRepeats(_originalWord, _originalSentence)
+			public int CountRepeats(string _originalWord, string _originalSentence)
 			{
-
 				return _wordCount;
 			}
 		}
