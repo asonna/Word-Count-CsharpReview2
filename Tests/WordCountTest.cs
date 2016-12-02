@@ -8,6 +8,7 @@ namespace TheWordCount.Objects
   public class WordCountTest
   {
     [Fact]
+    // Check a word again itself and validate a match
     public void CountRepeats_AgainstItself_1()
     {
       RepeatCounter newWord = new RepeatCounter("WORD", "WORD");
@@ -15,6 +16,7 @@ namespace TheWordCount.Objects
     }
 
     [Fact]
+    // Check a word again string of words with a single match and still return a count of 1
     public void CountRepeats_AgainstStringOfWordWithSingleMatch_1()
     {
       RepeatCounter newWord = new RepeatCounter("LIFE", "LIFE IS NOT EASY");
@@ -22,6 +24,7 @@ namespace TheWordCount.Objects
     }
 
     [Fact]
+    // Check a word again string of words with multiple match and return number of matches
     public void CountRepeats_AgainstStringOfWordWithMultipleMatch_3()
     {
       RepeatCounter newWord = new RepeatCounter("DOG", "A DOG OWNER TOOK HIS DOG INTO A DOG STORE");
@@ -29,6 +32,7 @@ namespace TheWordCount.Objects
     }
 
     [Fact]
+    // Check a word again string of words with word appearing as partial in other words
     public void CountRepeats_AgainstStringOfWordWithPartialOrContainedMatch_1()
     {
       RepeatCounter newWord = new RepeatCounter("CAT", "A CAT WAS CATCHING A NAP AT THE CATHEDRAL");
@@ -36,6 +40,7 @@ namespace TheWordCount.Objects
     }
 
     [Fact]
+    // Check a word again string of words with no match
     public void CountRepeats_AgainstStringOfWordWithNoMatch_0()
     {
       RepeatCounter newWord = new RepeatCounter("REALLY", "I WILL ACE THIS REVIEW");

@@ -25,3 +25,8 @@
 * _Input: REALLY, I WILL ACE THIS REVIEW
 * _Output: "Your original word has no match to your string; Please try another combination."
 * _Description: To ensure that no matching scenario are recognized by the program
+
+* _behavior6: Check a word again string of words with multiple match & mixed cases and still return number of matches
+* _Input: DOG, Dog owners take theirs dog into a Dog Store
+* _Output: 3
+* _Description: To ensure that the case sensitivity will not cause an error to the code

@@ -33,7 +33,7 @@ namespace TheWordCount.Objects
 
 			foreach (string word in matchlist)
 			{
-				if (_originalWord == word)
+				if (_originalWord.ToLower() == word.ToLower())
 				{
 					_workCount += 1;
 				}
