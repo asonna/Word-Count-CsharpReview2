@@ -13,12 +13,12 @@ _Webpage where users can put in a single word and a string of words and the comp
 
 ##Set up and installation
 
-* _To view the code:
-** _[Click on this link to repository.] (https://asonna.github.io/Word-Count-CsharpReview2)_
-** _Clone the repository._
-** _Navigate to the directory in PowerShell and run "dnu restore"._
-** _When that command is done, run "dnx kestrel"._
-** _Then open a browser and navigate to "http:/localhost:5004/"_.
+# _To view the code:
+* _[Click on this link to repository] (https://github.com/asonna/Word-Count-CsharpReview2)_
+* _Clone the repository._
+* _Navigate to the directory in PowerShell and run "dnu restore"._
+* _When that command is done, run "dnx kestrel"._
+* _Then open a browser and navigate to "http:/localhost:5004/"_.
 * _Note: The kestrel virtual server will only run on machines that run on the .Net framework_
 
 
