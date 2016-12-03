@@ -1,0 +1,32 @@
+body {
+  background-color: maroon;
+  color: white;
+}
+
+input {
+  color: black;
+}
+
+a {
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: yellow;
+  color: maroon;
+  padding: 5px;
+}
+
+a:hover {
+  color: lightblue;
+  background-color: blue;
+  text-decoration: none;
+}
+
+.jumbotron {
+  color: maroon;
+  text-align: center;
+}
+.divs {
+  background-color: maroon;
+}

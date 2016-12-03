@@ -13,6 +13,7 @@ namespace TheWordCount.Objects
 				return View["index.cshtml"];
 			};
 
+			};
 		}
 	}
 }
