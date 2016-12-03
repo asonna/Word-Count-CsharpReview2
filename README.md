@@ -10,10 +10,16 @@ _By Annie Sonna_
 
 _Webpage where users can put in a single word and a string of words and the computer will count how many times the original word appears in the string of words and return the count._
 
-* _Code was design and built using CS, CSHTML, json and CSS file in Atom_
-* _Then all files were uploaded into a github repository_
-* _To view the code, try to open the HTML file in a web browser at:
-_[Link to site.](https://asonna.github.io/Word-Count-CsharpReview2)_
+
+##Set up and installation
+
+* _To view the code:
+** _[Click on this link to repository.] (https://asonna.github.io/Word-Count-CsharpReview2)_
+** _Clone the repository._
+** _Navigate to the directory in PowerShell and run "dnu restore"._
+** _When that command is done, run "dnx kestrel"._
+** _Then open a browser and navigate to "http:/localhost:5004/"_.
+* _Note: The kestrel virtual server will only run on machines that run on the .Net framework_
 
 
 ##Specifications

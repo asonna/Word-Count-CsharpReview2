@@ -13,7 +13,17 @@
 				</div>
 				<div class="col-md-12">
           <h2>Matching of the word: "@Model.GetWord()</h2>
-
+				@{
+            int wordCount = Model.CountRepeats();
+  					if (wordcount == 0)
+            {
+              <h2>Your word has no match; Click below to try again!!!</h2>
+            }
+            else
+						{
+							<h2>Returned a count of: wordcount</h2>
+						}
+					}
 				</div>
 			</div>
       <a href="/">Try a new match</a>
