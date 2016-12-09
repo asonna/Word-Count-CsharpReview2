@@ -8,12 +8,13 @@ namespace TheWordCount.Objects
 	{
 		private string _originalWord;
 		private string _originalSentence;
-		// private int _wordCount = 0;
+		private int _wordCount = 0;
 
 		public RepeatCounter(string word, string sentence)
 		{
 			_originalWord = word;
 			_originalSentence = sentence;
+			_wordCount = 0;
 		}
 
 		public string GetWord()
@@ -26,20 +27,25 @@ namespace TheWordCount.Objects
 			return _originalSentence;
 		}
 
-		public int CountRepeats(string _originalWord, string _originalSentence)
+		public int _GetWordCount()
 		{
-			List<string> matchlist = new List<string> (_originalSentence.Split(' '));
-			int _workCount = 0;
+			return _wordCount;
+		}
 
-			foreach (string word in matchlist)
+
+		public int CountRepeats()
+		{
+			List<string> matchList = new List<string>(_originalSentence.Split(' '));
+			int _wordCount = 0;
+
+			foreach (string word in matchList)
 			{
 				if (_originalWord.ToLower() == word.ToLower())
 				{
-					_workCount += 1;
+					_wordCount += 1;
 				}
-
 			}
-			return _workCount;
+			return _wordCount;
 		}
 	}
 }

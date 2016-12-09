@@ -1,8 +1,11 @@
+using Microsoft.CSharp.RuntimeBinder;
+using System;
+using System.IO;
 using Nancy;
 using System.Collections.Generic;
 using TheWordCount.Objects;
 
-namespace TheWordCount.Objects
+namespace TheWordCount
 {
 	public class HomeModule : NancyModule
 	{
@@ -13,15 +16,16 @@ namespace TheWordCount.Objects
 				return View["index.cshtml"];
 			};
 
-			// Get["/result"] = _ =>
-			// {
-			// 	string word = Request.Form["originalWord"];
-			// 	string sentence = Request.Form["originalSentence"];
-			//
-			// 	int Result = RepeatCounter.CountRepeats(word, sentence);
-			//
-			// 	return View["result.cshtml", Result];
-			// };
+			Post["/result"] = _ =>
+			{
+				string _originalWord = Request.Form["originalWord"];
+				string _originalSentence = Request.Form["originalSentence"];
+				int _wordCount = 0;
+
+				RepeatCounter Result = new RepeatCounter(_originalWord, _originalSentence);
+
+				return View["result.cshtml", Result.CountRepeats()];
+			};
 
 		}
 	}
