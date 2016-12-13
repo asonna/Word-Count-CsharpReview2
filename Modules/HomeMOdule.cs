@@ -20,11 +20,17 @@ namespace TheWordCount
 			{
 				string _originalWord = Request.Form["originalWord"];
 				string _originalSentence = Request.Form["originalSentence"];
-				int _wordCount = 0;
 
-				RepeatCounter Result = new RepeatCounter(_originalWord, _originalSentence);
+				RepeatCounter counter = new RepeatCounter(_originalWord, _originalSentence);
 
-				return View["result.cshtml", Result.CountRepeats()];
+				int matches = counter.CountRepeats();
+
+				Dictionary<string, object> returnBox = new Dictionary<string, object> ()
+				{
+					{"matches", matches},
+					{"counter", counter}
+				};
+				return View["result.cshtml", returnBox];
 			};
 
 		}

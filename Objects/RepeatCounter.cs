@@ -14,7 +14,6 @@ namespace TheWordCount.Objects
 		{
 			_originalWord = word;
 			_originalSentence = sentence;
-			_wordCount = 0;
 		}
 
 		public string GetWord()
@@ -27,7 +26,7 @@ namespace TheWordCount.Objects
 			return _originalSentence;
 		}
 
-		public int _GetWordCount()
+		public int GetWordCount()
 		{
 			return _wordCount;
 		}
@@ -36,16 +35,16 @@ namespace TheWordCount.Objects
 		public int CountRepeats()
 		{
 			List<string> matchList = new List<string>(_originalSentence.Split(' '));
-			int _wordCount = 0;
+			int matchCount = 0;
 
 			foreach (string word in matchList)
 			{
 				if (_originalWord.ToLower() == word.ToLower())
 				{
-					_wordCount += 1;
+					matchCount += 1;
 				}
 			}
-			return _wordCount;
+			 return matchCount;
 		}
 	}
 }
